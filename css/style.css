@@ -1,16 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-
-h1 {
-    text-align: center;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav {
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
@@ -30,44 +35,117 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: 300;
 }
 
-form {
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #48c04e; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+.cta-button:hover {
+    background-color: #1f8324; 
+    transition: 0.3s;
+}
+
+main {
+    flex: 1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.goal-entry {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 0 auto;
     background-color: #fff;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+.goal-entry h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-form input[type="text"] {
-    width: 100%;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 96%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-weight: 300;
 }
 
 form button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #333;
+    background-color: #48c04e;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 300;
 }
 
 form button:hover {
-    background-color: #555;
+    transition: 0.3s;
+    background-color: #1f8324;
 }
 
 #goal-visualization {
@@ -77,4 +155,93 @@ form button:hover {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.goal-item {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    max-width: 800px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+.progress-bar div {
+    height: 20px;
+    background-color: #76c7c0;
+    width: 0;
+    transition: width 0.3s;
+    position: relative;
+}
+
+.progress-bar span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #333; /* Dark grey text */
+    font-weight: bold;
+}
+
+#motivational-tip {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #cfcfcf;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+#clear-goals {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 300;
+}
+
+#clear-goals:hover {
+    background-color: #ff1a1a;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button-container button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
 }

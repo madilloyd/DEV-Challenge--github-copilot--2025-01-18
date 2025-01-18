@@ -9,26 +9,35 @@
     <title>Goal Entry</title>
 </head>
 <body>
-    <h1>Goal Entry</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="goal-entry.html">Goal Entry</a></li>
-            <li><a href="visualization.html">Visualization</a></li>
-        </ul>
-    </nav>
-    <form id="goal-form">
-        <label for="goal">Enter your goal:</label>
-        <input type="text" id="goal" name="goal" required>
-        
-        <label for="target">Set a target value:</label>
-        <input type="number" id="target" name="target" required>
-        
-        <label for="progress">Enter current progress:</label>
-        <input type="number" id="progress" name="progress" required>
-        
-        <button type="submit">Submit</button>
-    </form>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="goal-entry.html">Goal Entry</a></li>
+                <li><a href="visualization.html">Visualization</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="goal-entry">
+            <h1>Enter Your Goal</h1>
+            <form id="goal-form">
+                <label for="goal">Enter your goal:</label>
+                <input type="text" id="goal" name="goal" required>
+                
+                <label for="target">Set a target value:</label>
+                <input type="number" id="target" name="target" required>
+                
+                <label for="progress">Enter current progress:</label>
+                <input type="number" id="progress" name="progress" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Madi L. All rights reserved.</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
